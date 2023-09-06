@@ -180,5 +180,93 @@
         "x": 520,
         "y": 460,
         "wires": []
+    },
+    {
+        "id": "c0d7c19f5265cdd0",
+        "type": "debug",
+        "z": "3318e2d49300ab53",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "683e202f92e6338d",
+        "type": "http request",
+        "z": "3318e2d49300ab53",
+        "name": "teste 4",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 350,
+        "y": 580,
+        "wires": [
+            [
+                "83289c5d8029d664",
+                "92858abfe3f4dd31"
+            ]
+        ]
+    },
+    {
+        "id": "fcbc9927a1ca91a1",
+        "type": "http response",
+        "z": "3318e2d49300ab53",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "83289c5d8029d664",
+        "type": "function",
+        "z": "3318e2d49300ab53",
+        "name": "function 3",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 580,
+        "wires": [
+            [
+                "fcbc9927a1ca91a1",
+                "c0d7c19f5265cdd0"
+            ]
+        ]
+    },
+    {
+        "id": "92858abfe3f4dd31",
+        "type": "debug",
+        "z": "3318e2d49300ab53",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 660,
+        "wires": []
     }
 ]
