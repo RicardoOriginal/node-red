@@ -92,5 +92,91 @@
         "x": 500,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "e365ceccdd59f13f",
+        "type": "debug",
+        "z": "3318e2d49300ab53",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "552c23145ae442c6",
+        "type": "http request",
+        "z": "3318e2d49300ab53",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 370,
+        "y": 380,
+        "wires": [
+            [
+                "d0ccb9f13741c450",
+                "de963b4f9da965f9"
+            ]
+        ]
+    },
+    {
+        "id": "9425f1c71fc67394",
+        "type": "http response",
+        "z": "3318e2d49300ab53",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 730,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d0ccb9f13741c450",
+        "type": "function",
+        "z": "3318e2d49300ab53",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 380,
+        "wires": [
+            [
+                "9425f1c71fc67394",
+                "e365ceccdd59f13f"
+            ]
+        ]
+    },
+    {
+        "id": "de963b4f9da965f9",
+        "type": "debug",
+        "z": "3318e2d49300ab53",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 460,
+        "wires": []
     }
 ]
