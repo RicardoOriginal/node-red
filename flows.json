@@ -1,0 +1,79 @@
+[
+    {
+        "id": "3318e2d49300ab53",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a1dbc5512c8b9db6",
+        "type": "debug",
+        "z": "3318e2d49300ab53",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c2a1f4c70206ff0b",
+        "type": "http request",
+        "z": "3318e2d49300ab53",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 350,
+        "y": 160,
+        "wires": [
+            [
+                "5df5d903cd265b8b"
+            ]
+        ]
+    },
+    {
+        "id": "983f44932b0a3b03",
+        "type": "http response",
+        "z": "3318e2d49300ab53",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5df5d903cd265b8b",
+        "type": "function",
+        "z": "3318e2d49300ab53",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 160,
+        "wires": [
+            [
+                "983f44932b0a3b03",
+                "a1dbc5512c8b9db6"
+            ]
+        ]
+    }
+]
